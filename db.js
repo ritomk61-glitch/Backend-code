@@ -1,12 +1,11 @@
-import {add }from './comment.js'
-import {del }from './comment.js'
-import {mul }from './comment.js'
-import {dev }from './comment.js'
+// ? create file
 
-// import { add , del , mul , dev} from ' ./comment.js'
+// const fs = require('fs');
+// fs.mkdir("Ritom",err => {
+//     console.log("file has been created");
+// })
 
-add(10,30);
-// import { format } from 'mysql2';
-del(20,10);
-mul(20,10);
-dev(20,10);
+// ?write a file
+// 
+
+// ? read a file
