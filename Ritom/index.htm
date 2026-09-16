@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Products</title>
+</head>
+
+<body>
+
+    <h1>Products</h1>
+
+    <button onclick="getProducts()">Get Books</button>
+
+    <div id="output"></div>
+
+    <script>
+
+        function getProducts() {
+
+            fetch("http://localhost:2000/books")
+                .then(response => response.json())
+                .then(data => {
+
+                    document.getElementById("output").innerHTML =
+                        data.map(product =>
+                            `<p>${product.id} - ${product.name}</p>`
+                        ).join("");
+
+                });
+        }
+
+    </script>
+
+</body>
+</html>

@@ -8,10 +8,10 @@ function App() {
 
   const calling = async () => {
     const response = await axios.get(
-      "https://dummyjson.com/products"
+      " http://localhost:2000/books"
     );
-
-    // console.log(response.data);
+// https://dummyjson.com/products
+    // console.log(response.data.books);
     setdatas(response.data.products);
   };
 
@@ -26,7 +26,7 @@ function details(){
     <div className="p-5">
 
       <button
-        className="bg-white border text-black text-2xl px-5 py-2"
+        className="bg-white border text-black text-2xl px-5 py-2 ml-150 rounded-2xl"
         onClick={calling}
       >
         Get Products
@@ -110,3 +110,4 @@ function details(){
 
 
 export default App;
+
