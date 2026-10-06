@@ -1,11 +1,19 @@
-// ? create file
+const mysql = require("mysql2");
 
-// const fs = require('fs');
-// fs.mkdir("Ritom",err => {
-//     console.log("file has been created");
-// })
+const db = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "ritomsql@123",
+    database: "teacher"
+});
 
-// ?write a file
-// 
+db.connect((err) => {
+    if (err) {
+        console.log("Database connection failed");
+        return;
+    }
 
-// ? read a file
+    console.log("Database connected successfullcly");
+});
+
+module.exports = db;
